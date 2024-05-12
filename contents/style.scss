@@ -1,0 +1,31 @@
+.rephase-button {
+	position: fixed;
+	top: 20vh;
+	right: 0;
+	background-color: #5783db;
+	color: white;
+
+	border-top-left-radius: 999px;
+	border-bottom-left-radius: 999px;
+	border: 0;
+	padding: 8px;
+	padding-left: 12px;
+	cursor: pointer;
+
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+
+	display: flex;
+	gap: 8px;
+
+	.rephase-text {
+		display: none;
+	}
+
+	&:hover {
+		.rephase-text {
+			display: flex;
+		}
+	}
+}
