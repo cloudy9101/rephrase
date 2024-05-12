@@ -1,7 +1,7 @@
 import { useStorage } from "@plasmohq/storage/hook"
 import { useEffect, useState } from "react"
 import "./style.css"
-import { Provider, type Config } from "~constants"
+import { Provider, type Config, tones } from "~constants"
 
 export const providers = [
   { label: "Ollama", value: Provider.ollama },
@@ -11,13 +11,6 @@ export const providers = [
 const openAIModels = [
   { label: "GPT 4", value: "gpt-4" },
   { label: "GPT 3.5 Turbo", value: "gpt-3.5-turbo" }
-]
-
-export const tones = [
-  "Friendly",
-  "Professional",
-  "Playful",
-  "Supportive"
 ]
 
 const getModels = async (config: Config) => {
@@ -46,7 +39,7 @@ function OptionsIndex() {
     remove
   }] = useStorage<Config>("config", {
     provider: "ollama",
-    endpoint: "",
+    endpoint: "http:127.0.0.1:11434",
     apiKey: "",
     model: "",
     defaultTone: "Friendly",
@@ -124,6 +117,7 @@ function OptionsIndex() {
         <select name="model" defaultValue={config.model} onChange={onChange("model")} value={config.model}
           className="w-full rounded-md border-0 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         >
+          <option value=""></option>
           {models.map(model => <option key={model.value} value={model.value}>{model.name}</option>)}
         </select>
       </div>

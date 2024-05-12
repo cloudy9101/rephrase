@@ -1,6 +1,5 @@
 import { useStorage } from "@plasmohq/storage/hook"
-import type { Config } from "~constants"
-import { tones } from "~options"
+import { tones, type Config } from "~constants"
 
 import "~options/style.css"
 

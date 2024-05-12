@@ -1,4 +1,4 @@
-.rephase-button {
+.rephrase-button {
 	position: fixed;
 	top: 20vh;
 	right: 0;
@@ -19,12 +19,12 @@
 	display: flex;
 	gap: 8px;
 
-	.rephase-text {
+	.rephrase-text {
 		display: none;
 	}
 
 	&:hover {
-		.rephase-text {
+		.rephrase-text {
 			display: flex;
 		}
 	}

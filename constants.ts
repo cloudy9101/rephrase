@@ -11,3 +11,10 @@ export interface Config {
   defaultTone: string
 }
 
+export const tones = [
+  "Friendly",
+  "Professional",
+  "Playful",
+  "Supportive"
+]
+
